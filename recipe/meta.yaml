@@ -10,12 +10,15 @@ source:
   md5: 2f8352acfedf83f701a564583db5e14d
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record=record.txt
+  entry_points:
+    - kernprof=kernprof:main
 
 requirements:
   build:
     - python
+    - setuptools
 
   run:
     - python
@@ -27,6 +30,7 @@ test:
     - line_profiler
 
   commands:
+    - kernprof --help
     - python -m kernprof --help
     - python -m line_profiler --help
 
