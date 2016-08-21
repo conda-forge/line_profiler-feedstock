@@ -34,8 +34,17 @@ install:
       source run_conda_forge_build_setup
 
 script:
-  - conda build ./recipe
+  # Build, store the exit status, and exit.
+  # Travis will muck with `$?` so we need to do this.
+  # See the docs for details.
+  #
+  # https://docs.travis-ci.com/user/customizing-the-build/#Note-on-%24%3F
+  #
+  - conda build ./recipe;
+    export CONDA_BUILD_STATUS=$?;
+    exit $CONDA_BUILD_STATUS
 
-after_success:
-
-  - ./ci_support/upload_or_check_non_existence.py ./recipe conda-forge --channel=main
+  # Upload the package if the build doesn't fail.
+  - if [[ $CONDA_BUILD_STATUS == 0 ]]; then
+        ./ci_support/upload_or_check_non_existence.py ./recipe conda-forge --channel=main ;
+    fi
