@@ -12,6 +12,8 @@ source:
 build:
   number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
+  entry_points:
+    - kernprof=kernprof:main
 
 requirements:
   build:
@@ -28,6 +30,7 @@ test:
     - line_profiler
 
   commands:
+    - kernprof --help
     - python -m kernprof --help
     - python -m line_profiler --help
 
