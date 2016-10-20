@@ -38,6 +38,8 @@ test:
 about:
   home: https://github.com/rkern/line_profiler
   license: BSD 3-Clause
+  license_family: BSD
+  license_file: LICENSE.txt
   summary: A module for monitoring memory usage of a python program
 
 extra:
