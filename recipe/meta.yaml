@@ -1,5 +1,6 @@
 {% set name = "line_profiler" %}
 {% set version = "1.0" %}
+{% set checksum = "a9e0c9ffa814f1215107c86c890afa8e63bec5a37d951f6f9d3668c1df2b1900" %}
 
 package:
   name: {{ name }}
@@ -8,7 +9,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a9e0c9ffa814f1215107c86c890afa8e63bec5a37d951f6f9d3668c1df2b1900
+  sha256: {{ checksum }}
 
 build:
   number: 1
