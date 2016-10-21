@@ -1,6 +1,6 @@
 {% set name = "line_profiler" %}
-{% set version = "1.0" %}
-{% set checksum = "a9e0c9ffa814f1215107c86c890afa8e63bec5a37d951f6f9d3668c1df2b1900" %}
+{% set version = "2.0" %}
+{% set checksum = "739f8ad0e4bcd0cb82e99afc09e00a0351234f6b3f0b1f7f0090a8a2fbbf8381" %}
 
 package:
   name: {{ name }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ checksum }}
 
 build:
-  number: 3
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
   entry_points:
     - kernprof=kernprof:main
@@ -25,6 +25,7 @@ requirements:
 
   run:
     - python
+    - ipython >=0.13
 
 test:
   imports:
