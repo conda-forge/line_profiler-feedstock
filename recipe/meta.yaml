@@ -19,7 +19,8 @@ build:
 
 requirements:
   build:
-    - toolchain
+    - {{ compiler('c') }}
+  host:
     - python
     - setuptools
 
