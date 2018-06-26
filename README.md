@@ -14,14 +14,16 @@ Summary: A module for monitoring memory usage of a python program
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/line_profiler-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/line_profiler-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/line_profiler-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/line_profiler-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/line_profiler-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/line-profiler-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/line_profiler-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/line_profiler-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/line_profiler-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/line_profiler-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/line_profiler-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/line-profiler-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/line_profiler/badges/version.svg)](https://anaconda.org/conda-forge/line_profiler)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/line_profiler/badges/downloads.svg)](https://anaconda.org/conda-forge/line_profiler)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-line_profiler-green.svg)](https://anaconda.org/conda-forge/line_profiler) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/line_profiler.svg)](https://anaconda.org/conda-forge/line_profiler) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/line_profiler.svg)](https://anaconda.org/conda-forge/line_profiler) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/line_profiler.svg)](https://anaconda.org/conda-forge/line_profiler) |
 
 Installing line_profiler
 ========================
