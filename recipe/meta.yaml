@@ -12,9 +12,10 @@ source:
   sha256: {{ checksum }}
 
 build:
-  number: 1002
-  skip: true  # [py>=37]
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 1003
+  script:
+    - python -m pip install --no-deps --ignore-installed .  # [py<37]
+    - find line_profiler -name '*.pyx' -exec cython {} \; && python -m pip install --no-deps --ignore-installed .  # [py>=37]
   entry_points:
     - kernprof = kernprof:main
 
