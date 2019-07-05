@@ -14,20 +14,20 @@ source:
 build:
   number: 1002
   script:
-    - del line_profiler.c  # [win]
-    - rm line_profiler.c  # [not win] 
-    - python -m pip install --no-deps --ignore-installed .
+    - del _line_profiler.c  # [win]
+    - rm _line_profiler.c  # [not win]
+    - "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - kernprof = kernprof:main
 
 requirements:
   build:
     - {{ compiler("c") }}
-    - cython
 
   host:
     - python
     - pip
+    - cython
 
   run:
     - python
