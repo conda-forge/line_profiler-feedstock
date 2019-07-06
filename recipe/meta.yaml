@@ -12,9 +12,13 @@ source:
   sha256: {{ checksum }}
 
 build:
-  number: 1002
-  skip: true  # [py>=37]
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 1003
+  script:
+    # Remove Python 3.7-incompatible cython-generated _line_profiler.c
+    # Cython was added to the host deps so this can be regenerated.
+    - del _line_profiler.c  # [win]
+    - rm _line_profiler.c  # [not win]
+    - "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - kernprof = kernprof:main
 
@@ -25,6 +29,7 @@ requirements:
   host:
     - python
     - pip
+    - cython
 
   run:
     - python
@@ -54,3 +59,4 @@ extra:
   recipe-maintainers:
     - jakirkham
     - koverholt
+    - grlee77
