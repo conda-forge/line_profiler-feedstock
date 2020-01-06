@@ -37,12 +37,10 @@ test:
   imports:
     - kernprof
     - line_profiler
-    - line_profiler_py35  # [py>34]
 
   commands:
     - kernprof --help
     - python -m kernprof --help
-    - python -m line_profiler --help
 
 about:
   home: https://github.com/rkern/line_profiler
