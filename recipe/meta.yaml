@@ -21,11 +21,13 @@ build:
 requirements:
   build:
     - {{ compiler("c") }}
+    - ninja
 
   host:
     - python
     - pip
     - cython
+    - scikit-build
 
   run:
     - python
