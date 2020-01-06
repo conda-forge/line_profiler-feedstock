@@ -14,10 +14,6 @@ source:
 build:
   number: 0
   script:
-    # Remove Python 3.7-incompatible cython-generated _line_profiler.c
-    # Cython was added to the host deps so this can be regenerated.
-    - del _line_profiler.c  # [win]
-    - rm _line_profiler.c  # [not win]
     - "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - kernprof = kernprof:main
