@@ -1,6 +1,6 @@
 {% set name = "line_profiler" %}
-{% set version = "2.1.2" %}
-{% set checksum = "efa66e9e3045aa7cb1dd4bf0106e07dec9f80bc781a993fbaf8162a36c20af5c" %}
+{% set version = "3.0.2" %}
+{% set checksum = "7218ad6bd81f8649b211974bf108933910f016d66b49651effe7bbf63667d141" %}
 
 package:
   name: {{ name }}
@@ -12,24 +12,26 @@ source:
   sha256: {{ checksum }}
 
 build:
-  number: 1003
+  number: 0
   script:
-    # Remove Python 3.7-incompatible cython-generated _line_profiler.c
-    # Cython was added to the host deps so this can be regenerated.
-    - del _line_profiler.c  # [win]
-    - rm _line_profiler.c  # [not win]
+    # We can't use CMAKE_GENERATOR implicitly via conda_build_config.yaml, yet,
+    # due to https://github.com/AnacondaRecipes/aggregate/pull/182
+    - set "CMAKE_GENERATOR={{ CMAKE_GENERATOR }}"  # [win]
     - "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - kernprof = kernprof:main
 
 requirements:
   build:
-    - {{ compiler("c") }}
+    - {{ compiler("cxx") }}
+    - cmake
+    - ninja
 
   host:
     - python
     - pip
     - cython
+    - scikit-build
 
   run:
     - python
@@ -39,15 +41,13 @@ test:
   imports:
     - kernprof
     - line_profiler
-    - line_profiler_py35  # [py>34]
 
   commands:
     - kernprof --help
     - python -m kernprof --help
-    - python -m line_profiler --help
 
 about:
-  home: https://github.com/rkern/line_profiler
+  home: https://github.com/pyutils/line_profiler
   license: BSD 3-Clause
   license_family: BSD
   license_file: LICENSE.txt
