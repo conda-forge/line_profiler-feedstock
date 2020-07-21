@@ -3,7 +3,7 @@ About line_profiler
 
 Home: https://github.com/pyutils/line_profiler
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Feedstock license: BSD-3-Clause
 
