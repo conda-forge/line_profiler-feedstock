@@ -17,7 +17,7 @@ build:
     # We can't use CMAKE_GENERATOR implicitly via conda_build_config.yaml, yet,
     # due to https://github.com/AnacondaRecipes/aggregate/pull/182
     - set "CMAKE_GENERATOR={{ CMAKE_GENERATOR }}"  # [win]
-    - export CMAKE_GENERATOR=Ninja  # [not win]
+    - export CMAKE_GENERATOR=Ninja  # [not (win or (osx and arm64))]
     - {{ PYTHON }} -m pip install . -vv
   entry_points:
     - kernprof = kernprof:main
@@ -30,13 +30,11 @@ requirements:
     - {{ compiler("cxx") }}
     - cmake
     - ninja
-
   host:
     - python
     - pip
     - cython
     - scikit-build
-
   run:
     - python
     - ipython >=0.13
