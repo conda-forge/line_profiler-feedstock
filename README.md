@@ -9,9 +9,9 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/line_profiler-f
 
 Summary: A module for monitoring memory usage of a python program
 
-Development: https://github.com/rkern/line_profiler
+Development: https://github.com/pyutils/line_profiler
 
-Documentation: https://github.com/rkern/line_profiler
+Documentation: https://github.com/pyutils/line_profiler
 
 Current build status
 ====================
