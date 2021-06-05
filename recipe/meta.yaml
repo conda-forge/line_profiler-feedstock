@@ -54,8 +54,8 @@ about:
   license_family: BSD
   license_file: LICENSE.txt
   summary: A module for monitoring memory usage of a python program
-  dev_url: https://github.com/rkern/line_profiler
-  doc_url: https://github.com/rkern/line_profiler
+  dev_url: https://github.com/pyutils/line_profiler
+  doc_url: https://github.com/pyutils/line_profiler
 
 extra:
   recipe-maintainers:
