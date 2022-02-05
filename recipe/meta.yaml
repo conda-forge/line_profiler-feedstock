@@ -1,6 +1,6 @@
 {% set name = "line_profiler" %}
-{% set version = "3.3.1" %}
-{% set checksum = "6e2fb792ca022f900f374f9659fd3e7c530cd4df7d3b7e84be889093b487639f" %}
+{% set version = "3.4.0" %}
+{% set checksum = "b6b0a8100a2829358e31ef7c6f427b1dcf2b1d8e5d38b55b219719ecf758aee5" %}
 
 package:
   name: {{ name }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ checksum }}
 
 build:
-  number: 1
+  number: 0
   script:
     # We can't use CMAKE_GENERATOR implicitly via conda_build_config.yaml, yet,
     # due to https://github.com/AnacondaRecipes/aggregate/pull/182
