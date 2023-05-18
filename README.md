@@ -1,11 +1,11 @@
-About line_profiler
-===================
+About line_profiler-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/line_profiler-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/pyutils/line_profiler
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/line_profiler-feedstock/blob/main/LICENSE.txt)
 
 Summary: A module for monitoring memory usage of a python program
 

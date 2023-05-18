@@ -12,12 +12,8 @@ source:
   sha256: {{ checksum }}
 
 build:
-  number: 0
+  number: 1
   script:
-    # We can't use CMAKE_GENERATOR implicitly via conda_build_config.yaml, yet,
-    # due to https://github.com/AnacondaRecipes/aggregate/pull/182
-    - set "CMAKE_GENERATOR={{ CMAKE_GENERATOR }}"  # [win]
-    - export CMAKE_GENERATOR=Ninja  # [not (win or (osx and arm64))]
     - export CMAKE_OSX_ARCHITECTURES="arm64"  # [osx and arm64]
     - {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -36,7 +32,7 @@ requirements:
     - python
     - pip
     - cython
-    - scikit-build
+    - scikit-build >=0.17
   run:
     - python
     - ipython >=0.13
