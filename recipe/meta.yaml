@@ -1,6 +1,6 @@
 {% set name = "line_profiler" %}
-{% set version = "4.0.3" %}
-{% set checksum = "deb2eb9e9119d911debe23edcec8ea68a2cd70c9e3f753c96aaf4a86ca497e7e" %}
+{% set version = "4.1.0" %}
+{% set checksum = "dd93444373231e624aee354ceaf29ac35889660923cbf912124c9872cf410127" %}
 
 package:
   name: {{ name }}
