@@ -1,6 +1,6 @@
 {% set name = "line_profiler" %}
-{% set version = "4.0.3" %}
-{% set checksum = "deb2eb9e9119d911debe23edcec8ea68a2cd70c9e3f753c96aaf4a86ca497e7e" %}
+{% set version = "4.1.0" %}
+{% set checksum = "dd93444373231e624aee354ceaf29ac35889660923cbf912124c9872cf410127" %}
 
 package:
   name: {{ name }}
@@ -23,7 +23,7 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython                                 # [build_platform != target_platform]
+    - cython <3                              # [build_platform != target_platform]
     - scikit-build                           # [build_platform != target_platform]
     - {{ compiler("cxx") }}
     - cmake
@@ -31,7 +31,7 @@ requirements:
   host:
     - python
     - pip
-    - cython
+    - cython <3
     - scikit-build >=0.17
   run:
     - python
