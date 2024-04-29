@@ -1,6 +1,6 @@
 {% set name = "line_profiler" %}
-{% set version = "4.1.1" %}
-{% set checksum = "2fa73d2ac736902e0a6d1e74cf663244218d9c238a7aa5b5acfd6ac6d4672830" %}
+{% set version = "4.1.3" %}
+{% set checksum = "e5f1123c3672c3218ba063c23bd64a51159e44649fed6780b993c781fb5ed318" %}
 
 package:
   name: {{ name }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ checksum }}
 
 build:
-  number: 1
+  number: 0
   script:
     - export CMAKE_OSX_ARCHITECTURES="arm64"  # [osx and arm64]
     - {{ PYTHON }} -m pip install . -vv
@@ -26,6 +26,7 @@ requirements:
     - cython <3                              # [build_platform != target_platform]
     - scikit-build                           # [build_platform != target_platform]
     - {{ compiler("cxx") }}
+    - {{ stdlib("c") }}
     - cmake
     - ninja
   host:
@@ -36,7 +37,6 @@ requirements:
   run:
     - python
     - ipython >=0.13
-    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
 
 test:
   imports:
