@@ -1,6 +1,6 @@
 {% set name = "line_profiler" %}
-{% set version = "4.1.1" %}
-{% set checksum = "2fa73d2ac736902e0a6d1e74cf663244218d9c238a7aa5b5acfd6ac6d4672830" %}
+{% set version = "4.1.2" %}
+{% set checksum = "aa56578b0ff5a756fe180b3fda7bd67c27bbd478b3d0124612d8cf00e4a21df2" %}
 
 package:
   name: {{ name }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ checksum }}
 
 build:
-  number: 1
+  number: 0
   script:
     - export CMAKE_OSX_ARCHITECTURES="arm64"  # [osx and arm64]
     - {{ PYTHON }} -m pip install . -vv
