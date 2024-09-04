@@ -10,7 +10,7 @@ source:
   sha256: e5f1123c3672c3218ba063c23bd64a51159e44649fed6780b993c781fb5ed318
 
 build:
-  number: 0
+  number: 1
   script:
     - export CMAKE_OSX_ARCHITECTURES="arm64"  # [osx and arm64]
     - {{ PYTHON }} -m pip install . -vv
@@ -32,6 +32,7 @@ requirements:
     - pip
     - cython >=3.0.3
     - scikit-build >=0.17
+    - setuptools
   run:
     - python
   run_constrained:
