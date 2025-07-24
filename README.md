@@ -253,7 +253,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-line_profiler-green.svg)](https://anaconda.org/conda-forge/line_profiler) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/line_profiler.svg)](https://anaconda.org/conda-forge/line_profiler) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/line_profiler.svg)](https://anaconda.org/conda-forge/line_profiler) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/line_profiler.svg)](https://anaconda.org/conda-forge/line_profiler) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-line__profiler-green.svg)](https://anaconda.org/conda-forge/line_profiler) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/line_profiler.svg)](https://anaconda.org/conda-forge/line_profiler) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/line_profiler.svg)](https://anaconda.org/conda-forge/line_profiler) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/line_profiler.svg)](https://anaconda.org/conda-forge/line_profiler) |
 
 Installing line_profiler
 ========================
