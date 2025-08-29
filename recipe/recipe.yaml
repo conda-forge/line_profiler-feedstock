@@ -13,7 +13,7 @@ source:
   sha256: a80f0afb05ba0d275d9dddc5ff97eab637471167ff3e66dcc7d135755059398c
 
 build:
-  number: 0
+  number: 1
   script:
     - if: osx and arm64
       then: "export CMAKE_OSX_ARCHITECTURES=\"arm64\""
@@ -25,11 +25,11 @@ build:
 requirements:
   build:
     - if: build_platform != target_platform
-      then: 
-      - python
-      - cross-python_${{ target_platform }}
-      - cython >=3.0.3
-      - scikit-build
+      then:
+        - python
+        - cross-python_${{ target_platform }}
+        - cython >=3.0.3
+        - scikit-build
     - ${{ compiler("cxx") }}
     - ${{ stdlib("c") }}
     - cmake
