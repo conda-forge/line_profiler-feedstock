@@ -44,6 +44,7 @@ requirements:
     - python
     - if: match(python, "<3.11")
       then: tomli
+    - typing_extensions
   run_constraints:
     - ipython >=8.14.0
     - rich >=12.3.0
