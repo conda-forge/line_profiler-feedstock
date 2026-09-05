@@ -13,7 +13,7 @@ source:
   sha256: 8d8a990c84c64bcde45af22af502d17bc0ae107be405ce41bba92af5c39c0000
 
 build:
-  number: 0
+  number: 1
   script:
     - if: osx and arm64
       then: "export CMAKE_OSX_ARCHITECTURES=\"arm64\""
