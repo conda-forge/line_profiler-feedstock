@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: line_profiler
-  version: "5.0.2"
+  version: "5.1.0"
 
 package:
   name: ${{ name }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 8d8a990c84c64bcde45af22af502d17bc0ae107be405ce41bba92af5c39c0000
+  sha256: 5717a2dccf0ced65fd19ba5e479581c47412831fe768bc211c6d0f5ba1ad9b47
 
 build:
-  number: 1
+  number: 0
   script:
     - if: osx and arm64
       then: "export CMAKE_OSX_ARCHITECTURES=\"arm64\""
