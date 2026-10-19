@@ -1,15 +1,14 @@
 schema_version: 1
 
 context:
-  name: line_profiler
   version: "5.1.0"
 
 package:
-  name: ${{ name }}
+  name: line_profiler
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  url: https://pypi.org/packages/source/l/line_profiler/line_profiler-${{ version }}.tar.gz
   sha256: 5717a2dccf0ced65fd19ba5e479581c47412831fe768bc211c6d0f5ba1ad9b47
 
 build:
@@ -29,16 +28,12 @@ requirements:
         - python
         - cross-python_${{ target_platform }}
         - cython >=3.0.3
-        - scikit-build
     - ${{ compiler("cxx") }}
     - ${{ stdlib("c") }}
-    - cmake
-    - ninja
   host:
     - python
     - pip
     - cython >=3.0.3
-    - scikit-build >=0.17
     - setuptools
   run:
     - python
@@ -47,7 +42,7 @@ requirements:
     - typing_extensions
   run_constraints:
     - ipython >=8.14.0
-    - rich >=12.3.0
+    - rich >=13.9.0
 
 tests:
   - python:
